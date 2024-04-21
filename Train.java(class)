@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+
+public class Train {
+    private String name;
+    private String time;
+    private int passengerStrength;
+    private int trainNumber;
+    ArrayList<Integer> bookedSeats;
+
+    public Train(String name, String time, int passengerStrength, int trainNumber) {
+        this.name = name;
+        this.time = time;
+        this.passengerStrength = passengerStrength;
+        this.trainNumber = trainNumber;
+        this.bookedSeats = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public int getPassengerStrength() {
+        return passengerStrength;
+    }
+
+    public int getTrainNumber() {
+        return trainNumber;
+    }
+
+    public boolean bookSeat(int seatNumber) {
+        if (bookedSeats.size() < passengerStrength) {
+            bookedSeats.add(seatNumber);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean cancelSeat(int seatNumber) {
+        if (bookedSeats.contains(seatNumber)) {
+            bookedSeats.remove(Integer.valueOf(seatNumber));
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void displayBookedSeats() {
+        System.out.println("Booked Seats for Train " + trainNumber + ": " + bookedSeats);
+    }
+}
