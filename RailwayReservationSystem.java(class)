@@ -1,3 +1,5 @@
+// This is java class named as RailwayReservationSystem.java 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -54,6 +56,8 @@ public class RailwayReservationSystem {
         scanner.close();
     }
 
+//This  method for Output Display info that is "Train Information" output button 1
+
     private void displayTrainInformation() {
         System.out.println("Train Information");
         System.out.println("Train Name\t\tTime\t\tPassenger Strength\tTrain Number");
@@ -63,6 +67,8 @@ public class RailwayReservationSystem {
         }
     }
 
+// This method for output Display info that is "Seat Availability" output button 2
+
     private void displaySeatAvailability() {
         System.out.println("Seat Availability");
         for (Train train : trains) {
@@ -71,15 +77,21 @@ public class RailwayReservationSystem {
         }
     }
 
+// This method for output Display info that is "Booking" output button 3
+
     private void displayBookingInfo() {
         System.out.println("Booking");
         System.out.println("Welcome, Booking now! You can Book by online ticket without downtime. UPI accepted and Extra 5% discount on HDFC credit card.");
     }
 
+// This method for output Display info that is " Canceling" output button 4
+
     private void displayCancelingInfo() {
         System.out.println("Canceling");
         System.out.println("Canceling is now available online method only. Broker charge taken and money will be refunded in 2 to 4 business days. Only applicable before Train chart preparation or 8 hours before train time.");
     }
+
+// This method for output Display info that is " Ticket Display" output button 5
 
     private void displayTicketInfo() {
         System.out.println("Ticket Display");
